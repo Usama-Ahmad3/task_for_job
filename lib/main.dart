@@ -1,3 +1,4 @@
+import 'package:flu/data/network/mock_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
@@ -10,6 +11,7 @@ import 'res/routes/routes.dart';
 GetIt getIt = GetIt.instance;
 void main() {
   getIt.registerLazySingleton<MoviesRepository>(() => MovieServices());
+  // getIt.registerLazySingleton<MoviesRepository>(() => MockServices());
   runApp(const MyApp());
 }
 
