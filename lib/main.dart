@@ -1,4 +1,3 @@
-import 'package:flu/data/network/mock_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
