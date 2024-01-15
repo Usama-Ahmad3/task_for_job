@@ -110,12 +110,15 @@ class FavouriteController extends GetxController {
 
     ///fetching data from Shared Preference in a list
     favouriteImage =
-        RxList<String>.from(prefs.getStringList('Image')!.toList());
+        RxList<String>.from(prefs.getStringList('Image')?.toList() ?? []);
     favouriteTitle =
-        RxList<String>.from(prefs.getStringList('Title')!.toList());
-    favouriteLang = RxList<String>.from(prefs.getStringList('Lang')!.toList());
-    favouriteDate = RxList<String>.from(prefs.getStringList('Date')!.toList());
-    favouriteOver = RxList<String>.from(prefs.getStringList('Over')!.toList());
+        RxList<String>.from(prefs.getStringList('Title')?.toList() ?? []);
+    favouriteLang =
+        RxList<String>.from(prefs.getStringList('Lang')?.toList() ?? []);
+    favouriteDate =
+        RxList<String>.from(prefs.getStringList('Date')?.toList() ?? []);
+    favouriteOver =
+        RxList<String>.from(prefs.getStringList('Over')?.toList() ?? []);
     loading.value = false;
   }
 }
