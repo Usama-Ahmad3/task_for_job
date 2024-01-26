@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flu/data/network/Movie_services.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.blue),
         useMaterial3: true,
       ),
+      // home: const SwitchScreen(),
       getPages: Routes.appRoutes(),
     );
   }
